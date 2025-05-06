@@ -1,0 +1,60 @@
+.callout {
+    --color-abstract: 255, 224, 229; /* Pastel Light Pink */
+    --color-event: 255, 205, 210; /* Pastel Pink */
+    --color-info: 224, 242, 241; /* Pastel Light Blue */
+    --color-metadata: 225, 224, 245; /* Pastel Lavender */
+    --color-quote: 225, 190, 231; /* Pastel Purple */
+    --color-resource: 187, 222, 251; /* Pastel Blue */
+    --color-tip: 200, 230, 201; /* Pastel Green */
+    
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Event Callout */
+.callout[data-callout="event"] {
+    --callout-color: rgba(var(--color-event), 0.5);
+    --callout-icon: lucide-calendar;
+}
+
+/* Resource Callout */
+.callout[data-callout="resource"] {
+    --callout-color: rgba(var(--color-resource), 0.5);
+    --callout-icon: lucide-book;
+}
+
+/* Tip Callout */
+.callout[data-callout="tip"] {
+    --callout-color: rgba(var(--color-tip), 0.5);
+    --callout-icon: lucide-lightbulb;
+}
+
+/* Quote Callout */
+.callout[data-callout="quote"] {
+    --callout-color: rgba(var(--color-quote), 0.5);
+    --callout-icon: lucide-quote;
+}
+
+/* Info Callout */
+.callout[data-callout="info"] {
+    --callout-color: rgba(var(--color-info), 0.5);
+    --callout-icon: lucide-info;
+}
+
+/* Abstract Callout */
+.callout[data-callout="abstract"] {
+    --callout-color: rgba(var(--color-abstract), 0.5);
+    --callout-icon: lucide-book-marked;
+}
+
+/* Metadata Callout */
+.callout[data-callout="metadata"] {
+    --callout-color: rgba(var(--color-metadata), 0.5);
+    --callout-icon: lucide-file-cog;
+}
+
+/* Apply the background color */
+.callout {
+    background-color: var(--callout-color);
+}
